@@ -1,27 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import Weather from './Weather';
-import Spinner from "./Spinner/index";
-import getWeatherAPI from '../Services/getWeatherAPI'
-import getLocation from '../Services/geolocation';
+import React from 'react';
+import Spinner from '../Components/Spinner/index';
+import Home from "../pages/Home/index";
+import Detail from '../pages/Detail/index'
+
+import useLocation from '../hooks/useLocation'
+
+import { Route, Link } from "wouter";
+
 
 const Main = () => {
-    const [location, setLocation] = useState([]);
-    const [loading, setLoading] = useState(false);
-
-    useEffect(() => {
-        getLocation(getWeatherAPI, setLocation,setLoading);
-    }, [])
-    console.log(location)
+    const { loading } = useLocation()
     return (
-            <>
-                {
-                    loading ?
+        <>
+            {
+                loading ?
                     <Spinner /> :
-                    <div>
-                        {location && <Weather data={location} />}
+                    <div className='Main'>
+                        <Link to='/'>Current</Link>
+                        <Link to='/detail'>Detail</Link>
+                        <Route path="/" component={Home} />
+                        <Route path="/detail" component={Detail} />
                     </div>
-                }
-            </>
+
+            }
+        </>
     )
 }
 export default Main
