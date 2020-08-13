@@ -1,8 +1,22 @@
 import React from 'react';
-export default function WeatherDetails(){
-    return(
-        <div className = "WeatherDetails">
-            Something
+import SingleDetail from './SingleDetail';
+
+export default function WeatherDetails({ data }) {
+    const singleDetails = {...data};
+    const singleDetailsKeys = Object.keys(singleDetails);
+    
+    return (
+        <div className="WeatherDetails">
+            <h2>Description</h2>
+            <div className="Single_Details" >
+                {
+                    singleDetailsKeys.map(singleDetailKey => {
+                        return (
+                            <SingleDetail key = {singleDetailKey} detail={singleDetailKey} value={singleDetails[singleDetailKey]} />
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

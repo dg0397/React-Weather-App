@@ -6,9 +6,9 @@ import useGlobalLocation from '../../hooks/useGlobalLocation';
 
 
 export default function Detail(){
-    const {location} = useGlobalLocation();
-    console.log(location)
+    const {location:{detailData}} = useGlobalLocation();
+    console.log(detailData)
     return(
-        <WeatherDetails />
+        <WeatherDetails data = {detailData} />
     )
 }

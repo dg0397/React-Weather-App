@@ -5,7 +5,8 @@ import Detail from '../pages/Detail/index'
 
 import useLocation from '../hooks/useLocation'
 
-import { Route, Link } from "wouter";
+import { Route} from "wouter";
+import NavMenu from './NavMenu';
 
 
 const Main = () => {
@@ -16,8 +17,7 @@ const Main = () => {
                 loading ?
                     <Spinner /> :
                     <div className='Main'>
-                        <Link to='/'>Current</Link>
-                        <Link to='/detail'>Detail</Link>
+                        <NavMenu />
                         <Route path="/" component={Home} />
                         <Route path="/detail" component={Detail} />
                     </div>
