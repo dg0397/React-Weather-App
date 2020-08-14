@@ -1,5 +1,6 @@
 import React from 'react';
-import SingleDetail from './SingleDetail';
+import SingleDetail from '../SingleDetail/SingleDetail';
+import './WeatherDetails.css'
 
 export default function WeatherDetails({ data }) {
     const singleDetails = {...data};

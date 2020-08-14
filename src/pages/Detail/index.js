@@ -1,5 +1,5 @@
 import React from 'react';
-import WeatherDetails from '../../Components/WeatherDetails'
+import WeatherDetails from '../../Components/WeatherDetails/WeatherDetails'
 
 import useGlobalLocation from '../../hooks/useGlobalLocation';
 
