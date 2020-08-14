@@ -13,7 +13,7 @@ export default function WeatherDetails({ data }) {
                 {
                     singleDetailsKeys.map(singleDetailKey => {
                         return (
-                            <SingleDetail key = {singleDetailKey} detail={singleDetailKey} value={singleDetails[singleDetailKey]} />
+                            <SingleDetail key = {singleDetailKey} detail={singleDetailKey} valueKey={singleDetails[singleDetailKey]} />
                         )
                     })
                 }
