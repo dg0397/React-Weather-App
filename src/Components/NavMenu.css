@@ -1,0 +1,14 @@
+.Buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.Buttons a{
+    padding: 5px;
+    font-size: .7em;
+    color: aliceblue;
+    text-decoration: none;
+    background-color: hsl(200, 63%, 45%);
+    border-radius: 5px;
+    
+}

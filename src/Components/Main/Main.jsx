@@ -1,12 +1,12 @@
 import React from 'react';
-import Spinner from '../Components/Spinner/index';
-import Home from "../pages/Home/index";
-import Detail from '../pages/Detail/index'
+import Spinner from '../Spinner/index';
+import Home from "../../pages/Home/index";
+import Detail from '../../pages/Detail/index'
 
-import useLocation from '../hooks/useLocation'
+import useLocation from '../../hooks/useLocation'
 
 import { Route} from "wouter";
-import NavMenu from './NavMenu';
+import NavMenu from '../NavMenu';
 
 
 const Main = () => {
