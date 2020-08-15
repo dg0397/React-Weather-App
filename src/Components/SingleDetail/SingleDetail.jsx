@@ -3,9 +3,9 @@ import './SingleDetail.css';
 
 import useDataDetail from '../../hooks/useDataDetail'
 
-export default function SingleDetail({detail,valueKey}){
+export default function SingleDetail({detail,valueKey,temperatureUnit}){
     
-    const {key,value} = useDataDetail(detail,valueKey,"F");
+    const {key,value} = useDataDetail(detail,valueKey,temperatureUnit);
     const newDetailFormat = key.replace("_"," ").toUpperCase();
     
     return(

@@ -2,7 +2,7 @@ import React from 'react';
 import SingleDetail from '../SingleDetail/SingleDetail';
 import './WeatherDetails.css'
 
-export default function WeatherDetails({ data }) {
+export default function WeatherDetails({ data, temperatureUnit }) {
     const singleDetails = {...data};
     const singleDetailsKeys = Object.keys(singleDetails);
     
@@ -13,7 +13,7 @@ export default function WeatherDetails({ data }) {
                 {
                     singleDetailsKeys.map(singleDetailKey => {
                         return (
-                            <SingleDetail key = {singleDetailKey} detail={singleDetailKey} valueKey={singleDetails[singleDetailKey]} />
+                            <SingleDetail key = {singleDetailKey} detail={singleDetailKey} valueKey={singleDetails[singleDetailKey]} temperatureUnit ={temperatureUnit}/>
                         )
                     })
                 }

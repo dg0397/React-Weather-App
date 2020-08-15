@@ -3,9 +3,12 @@ import useGlobalLocation from '../../hooks/useGlobalLocation';
 import Weather from '../../Components/Weather';
 
 export default function Home(){
-    const {location} = useGlobalLocation();
+    const {location,setTemperatureUnit,temperatureUnit} = useGlobalLocation();
     console.log(location)
+    const changeTemperatureFormat = (format) => {
+        setTemperatureUnit(format)
+    }
     return(
-        <Weather  {...location}/>
+        <Weather  data = {location} changeTemperatureFormat = {changeTemperatureFormat} temperatureUnit = {temperatureUnit}/>
     )
 }
