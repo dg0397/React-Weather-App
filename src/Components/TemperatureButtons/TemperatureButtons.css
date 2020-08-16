@@ -1,0 +1,19 @@
+.Temperature h3{
+    font-weight: 300;
+}
+.TemperatureButtons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.TemperatureButtons button{
+    padding: 5px 10px;
+    font-size: .7em;
+    color: aliceblue;
+    background-color: hsl(200, 33%, 34%);
+    border-radius: 5px;
+    border: 1px solid aliceblue;
+}
+#active{
+    background-color: hsl(200, 61%, 59%) !important
+}

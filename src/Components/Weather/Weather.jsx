@@ -1,5 +1,6 @@
 import React from 'react'
-import TemperatureButtons from './TemperatureButtons';
+import TemperatureButtons from '../TemperatureButtons/TemperatureButtons';
+import "./Weather.css"
 
 const Weather = ({data,changeTemperatureFormat,temperatureUnit }) =>{
     const {name,country,temp,mainDescription,icon} = data

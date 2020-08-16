@@ -8,6 +8,7 @@ import useLocation from '../../hooks/useLocation'
 import { Route} from "wouter";
 import NavMenu from '../NavMenu';
 
+import './Main.css';
 
 const Main = () => {
     const { loading } = useLocation()

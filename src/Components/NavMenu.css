@@ -2,13 +2,15 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 1rem;
 }
-.Buttons a{
+.Buttons p{
     padding: 5px;
     font-size: .7em;
     color: aliceblue;
     text-decoration: none;
-    background-color: hsl(200, 63%, 45%);
+    background-color: hsl(200, 63%, 34%);
     border-radius: 5px;
-    
+    border: 1px solid aliceblue;
+    width: 45%;
 }

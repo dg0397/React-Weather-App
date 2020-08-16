@@ -1,6 +1,6 @@
 import React from 'react';
 import useGlobalLocation from '../../hooks/useGlobalLocation';
-import Weather from '../../Components/Weather';
+import Weather from '../../Components/Weather/Weather';
 
 export default function Home(){
     const {location,setTemperatureUnit,temperatureUnit} = useGlobalLocation();
