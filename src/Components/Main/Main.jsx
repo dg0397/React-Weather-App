@@ -3,15 +3,14 @@ import Spinner from '../Spinner/index';
 import Home from "../../pages/Home/index";
 import Detail from '../../pages/Detail/index'
 
-import useLocation from '../../hooks/useLocation'
-
 import { Route} from "wouter";
 import NavMenu from '../NavMenu';
 
 import './Main.css';
+import useGlobalLocation from '../../hooks/useGlobalLocation';
 
 const Main = () => {
-    const { loading } = useLocation()
+    const { loading } = useGlobalLocation()
     return (
         <>
             {
